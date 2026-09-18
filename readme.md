@@ -1,222 +1,222 @@
-**# 🚗 JourneyTogether — Long-Term Ride Sharing Platform**
+# 🚗 JourneyTogether — Long-Term Ride Sharing Platform
 
-\> **\*\*Carpooling reimagined.\*\*** JourneyTogether is a full-stack MERN ride-sharing platform built for daily commuters who want a smarter, greener, and safer way to travel together — without the friction of rebooking every day.
+> **Carpooling reimagined.** JourneyTogether is a full-stack MERN ride-sharing platform built for daily commuters who want a smarter, greener, and safer way to travel together — without the friction of rebooking every day.
 
-[![React]\(https\://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)]\(https\://react.dev/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 
-[![Node.js]\(https\://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)]\(https\://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 
-[![MongoDB]\(https\://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb&logoColor=white)]\(https\://www\.mongodb.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 
-[![TailwindCSS]\(https\://img.shields.io/badge/TailwindCSS-4.0-06B6D4?logo=tailwindcss&logoColor=white)]\(https\://tailwindcss.com/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.0-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-[![Socket.io]\(https\://img.shields.io/badge/Socket.io-Realtime-010101?logo=socket.io)]\(https\://socket.io/)
+[![Socket.io](https://img.shields.io/badge/Socket.io-Realtime-010101?logo=socket.io)](https://socket.io/)
 
-[![TomTom]\(https\://img.shields.io/badge/TomTom-Maps%20API-DF1B12)]\(https\://developer.tomtom.com/)
+[![TomTom](https://img.shields.io/badge/TomTom-Maps%20API-DF1B12)](https://developer.tomtom.com/)
 
-[![Twilio]\(https\://img.shields.io/badge/Twilio-SMS%20API-F22F46?logo=twilio&logoColor=white)]\(https\://www\.twilio.com/)
+[![Twilio](https://img.shields.io/badge/Twilio-SMS%20API-F22F46?logo=twilio&logoColor=white)](https://www.twilio.com/)
 
-\---
+---
 
-**## 📖 Table of Contents**
+## 📖 Table of Contents
 
-\- [Overview]\(#-overview)
+- [Overview](#-overview)
 
-\- [Key Features]\(#-key-features)
+- [Key Features](#-key-features)
 
-\- [Tech Stack]\(#-tech-stack)
+- [Tech Stack](#-tech-stack)
 
-\- [Project Structure]\(#-project-structure)
+- [Project Structure](#-project-structure)
 
-\- [Architecture]\(#️-architecture)
+- [Architecture](#️-architecture)
 
-\- [API Reference]\(#-api-reference)
+- [API Reference](#-api-reference)
 
-\- [Getting Started]\(#-getting-started)
+- [Getting Started](#-getting-started)
 
-\- [Environment Variables]\(#-environment-variables)
+- [Environment Variables](#-environment-variables)
 
-\- [Carbon Savings Formula]\(#-how-carbon-savings-are-calculated)
+- [Carbon Savings Formula](#-how-carbon-savings-are-calculated)
 
-\- [User Journey]\(#-user-journey)
+- [User Journey](#-user-journey)
 
-\- [Safety Features]\(#️-safety-features)
+- [Safety Features](#️-safety-features)
 
-\---
+---
 
-**## 🌟 Overview**
+## 🌟 Overview
 
-JourneyTogether solves a core inefficiency in ride-sharing — the daily rebooking cycle. By enabling users to form **\*\*Fixed Commuter Circles\*\***, the platform lets regular commuters lock in recurring rides with trusted people on their route, cutting booking overhead entirely.
+JourneyTogether solves a core inefficiency in ride-sharing — the daily rebooking cycle. By enabling users to form **Fixed Commuter Circles**, the platform lets regular commuters lock in recurring rides with trusted people on their route, cutting booking overhead entirely.
 
-Beyond convenience, JourneyTogether actively tracks the **\*\*environmental impact\*\*** of every shared ride, delivering personalized CO₂ savings metrics and contributing to a measurable reduction in per-commute emissions. The platform also prioritizes **\*\*safety\*\*** through an integrated SOS emergency system and women-only ride filtering.
+Beyond convenience, JourneyTogether actively tracks the **environmental impact** of every shared ride, delivering personalized CO₂ savings metrics and contributing to a measurable reduction in per-commute emissions. The platform also prioritizes **safety** through an integrated SOS emergency system and women-only ride filtering.
 
-\---
+---
 
-**## ✨ Key Features**
+## ✨ Key Features
 
-**### 🔄 Ride Management**
+### 🔄 Ride Management
 
-\- **\*\*Create & Browse Rides\*\*** — Post rides with origin, destination, date, time, available seats, and price
+- **Create & Browse Rides** — Post rides with origin, destination, date, time, available seats, and price
 
-\- **\*\*Ride Booking\*\*** — Passengers can confirm their seat; seat count decrements in real time
+- **Ride Booking** — Passengers can confirm their seat; seat count decrements in real time
 
-\- **\*\*Ride Completion\*\*** — Drivers mark rides as complete, triggering the carbon savings calculation
+- **Ride Completion** — Drivers mark rides as complete, triggering the carbon savings calculation
 
-\- **\*\*Filter Rides\*\*** — Search by origin, destination, date, or ride type (women-only)
+- **Filter Rides** — Search by origin, destination, date, or ride type (women-only)
 
-\- **\*\*Ongoing & History Views\*\*** — Separate views for active and past rides per user
+- **Ongoing & History Views** — Separate views for active and past rides per user
 
-**### 🌿 Carbon Footprint Tracker**
+### 🌿 Carbon Footprint Tracker
 
-\- Automatically calculates CO₂ savings for every completed shared ride
+- Automatically calculates CO₂ savings for every completed shared ride
 
-\- Uses a physics-based formula: \`CO₂ Saved = distance × (1 - 1/totalPeople) × 0.21 kg/km\`
+- Uses a physics-based formula: `CO₂ Saved = distance × (1 - 1/totalPeople) × 0.21 kg/km`
 
-\- Carbon savings are accumulated per user and displayed on the profile dashboard
+- Carbon savings are accumulated per user and displayed on the profile dashboard
 
-\- Results in an estimated **\*\*25% reduction\*\*** in individual per-commute emissions
+- Results in an estimated **25% reduction** in individual per-commute emissions
 
-**### 🚨 SOS Emergency System (Twilio)**
+### 🚨 SOS Emergency System (Twilio)
 
-\- One-tap SOS alert sends an SMS with the user's **\*\*live GPS coordinates\*\*** to all registered emergency contacts
+- One-tap SOS alert sends an SMS with the user's **live GPS coordinates** to all registered emergency contacts
 
-\- Message includes a **\*\*TomTom MapShare live location link\*\*** for instant tracking
+- Message includes a **TomTom MapShare live location link** for instant tracking
 
-\- Users can add, view, and delete emergency contacts from their profile
+- Users can add, view, and delete emergency contacts from their profile
 
-**### 👩 Women-Only Ride Mode**
+### 👩 Women-Only Ride Mode
 
-\- Drivers can flag rides as **\*\*Women-Only\*\*** at creation time
+- Drivers can flag rides as **Women-Only** at creation time
 
-\- Booking is restricted to verified female passengers
+- Booking is restricted to verified female passengers
 
-\- Both the driver and passenger must be female — enforced at the server level
+- Both the driver and passenger must be female — enforced at the server level
 
-\- Provides a safer, more trusted commuting option
+- Provides a safer, more trusted commuting option
 
-**### 🔐 Secure Multi-Factor Authentication**
+### 🔐 Secure Multi-Factor Authentication
 
-\- **\*\*Email OTP verification\*\*** on signup via Brevo transactional email API
+- **Email OTP verification** on signup via Brevo transactional email API
 
-\- **\*\*JWT sessions\*\*** stored in secure HTTP-only cookies
+- **JWT sessions** stored in secure HTTP-only cookies
 
-\- \`protectRoute\` middleware validates every authenticated request
+- `protectRoute` middleware validates every authenticated request
 
-\- Profile photo upload via **\*\*Cloudinary\*\*** (Multer + cloud storage)
+- Profile photo upload via **Cloudinary** (Multer + cloud storage)
 
-\- Vehicle registration (number plate, type, fuel) stored per user profile
+- Vehicle registration (number plate, type, fuel) stored per user profile
 
-**### 🗺️ TomTom Maps Integration**
+### 🗺️ TomTom Maps Integration
 
-\- **\*\*Geocoding\*\*** — Converts city/address input to precise lat/lon coordinates
+- **Geocoding** — Converts city/address input to precise lat/lon coordinates
 
-\- **\*\*Route Distance Calculation\*\*** — Uses TomTom Routing API to compute real driving distances in km
+- **Route Distance Calculation** — Uses TomTom Routing API to compute real driving distances in km
 
-\- **\*\*Autocomplete Search\*\*** — Location suggestions scoped to India with proximity-aware bias
+- **Autocomplete Search** — Location suggestions scoped to India with proximity-aware bias
 
-\- **\*\*Live Map\*\*** — Real-time driver location streaming via Socket.io, rendered on an interactive map
+- **Live Map** — Real-time driver location streaming via Socket.io, rendered on an interactive map
 
-\- **\*\*Route Visualization\*\*** — Leaflet + React-Leaflet renders the full route on ride detail cards
+- **Route Visualization** — Leaflet + React-Leaflet renders the full route on ride detail cards
 
-**### ⭐ Driver Rating System**
+### ⭐ Driver Rating System
 
-\- Passengers can rate their driver (1–5 stars) after a ride is completed
+- Passengers can rate their driver (1–5 stars) after a ride is completed
 
-\- Ratings are averaged and displayed on driver profiles and ride listings
+- Ratings are averaged and displayed on driver profiles and ride listings
 
-\- Duplicate rating prevention — one rating per passenger per ride
+- Duplicate rating prevention — one rating per passenger per ride
 
-**### ⚡ Real-Time Location Tracking (Socket.io)**
+### ⚡ Real-Time Location Tracking (Socket.io)
 
-\- Drivers broadcast their GPS location via WebSocket using the \`sendLocation\` event
+- Drivers broadcast their GPS location via WebSocket using the `sendLocation` event
 
-\- Passengers in the same ride room receive live \`locationUpdate\` events
+- Passengers in the same ride room receive live `locationUpdate` events
 
-\- Room-based architecture: each ride has its own isolated Socket.io room (\`ride-\<rideId>\`)
+- Room-based architecture: each ride has its own isolated Socket.io room (`ride-<rideId>`)
 
-\---
+---
 
-**## 🛠️ Tech Stack**
+## 🛠️ Tech Stack
 
-**### Frontend**
+### Frontend
 
-\| Technology | Purpose |
+| Technology | Purpose |
 
-\|---|---|
+|---|---|
 
-\| **\*\*React 19\*\*** | UI framework |
+| **React 19** | UI framework |
 
-\| **\*\*Vite 6\*\*** | Build tool & dev server |
+| **Vite 6** | Build tool & dev server |
 
-\| **\*\*TailwindCSS 4\*\*** | Utility-first styling |
+| **TailwindCSS 4** | Utility-first styling |
 
-\| **\*\*Framer Motion\*\*** | Page transitions & micro-animations |
+| **Framer Motion** | Page transitions & micro-animations |
 
-\| **\*\*GSAP\*\*** | Advanced SVG & timeline animations |
+| **GSAP** | Advanced SVG & timeline animations |
 
-\| **\*\*React Router v7\*\*** | Client-side routing |
+| **React Router v7** | Client-side routing |
 
-\| **\*\*Socket.io Client\*\*** | Real-time WebSocket communication |
+| **Socket.io Client** | Real-time WebSocket communication |
 
-\| **\*\*TomTom Web SDK\*\*** | Interactive maps |
+| **TomTom Web SDK** | Interactive maps |
 
-\| **\*\*Leaflet + React-Leaflet\*\*** | Route rendering |
+| **Leaflet + React-Leaflet** | Route rendering |
 
-\| **\*\*Lucide React\*\*** | Icon library |
+| **Lucide React** | Icon library |
 
-\| **\*\*Axios\*\*** | HTTP client |
+| **Axios** | HTTP client |
 
-\| **\*\*React Hot Toast\*\*** | Toast notifications |
+| **React Hot Toast** | Toast notifications |
 
-**### Backend**
+### Backend
 
-\| Technology | Purpose |
+| Technology | Purpose |
 
-\|---|---|
+|---|---|
 
-\| **\*\*Node.js + Express\*\*** | REST API server |
+| **Node.js + Express** | REST API server |
 
-\| **\*\*MongoDB + Mongoose\*\*** | Database & ODM |
+| **MongoDB + Mongoose** | Database & ODM |
 
-\| **\*\*Socket.io\*\*** | Real-time WebSocket server |
+| **Socket.io** | Real-time WebSocket server |
 
-\| **\*\*JWT (jsonwebtoken)\*\*** | Auth token generation & verification |
+| **JWT (jsonwebtoken)** | Auth token generation & verification |
 
-\| **\*\*bcryptjs\*\*** | Password hashing |
+| **bcryptjs** | Password hashing |
 
-\| **\*\*Twilio\*\*** | SMS SOS alerts |
+| **Twilio** | SMS SOS alerts |
 
-\| **\*\*Brevo (@getbrevo/brevo)\*\*** | Transactional email (OTP & welcome) |
+| **Brevo (@getbrevo/brevo)** | Transactional email (OTP & welcome) |
 
-\| **\*\*Cloudinary\*\*** | Profile photo storage |
+| **Cloudinary** | Profile photo storage |
 
-\| **\*\*Multer\*\*** | File upload handling |
+| **Multer** | File upload handling |
 
-\| **\*\*cookie-parser\*\*** | HTTP-only cookie management |
+| **cookie-parser** | HTTP-only cookie management |
 
-**### External APIs**
+### External APIs
 
-\| API | Usage |
+| API | Usage |
 
-\|---|---|
+|---|---|
 
-\| **\*\*TomTom Geocoding API\*\*** | Address → lat/lon coordinates |
+| **TomTom Geocoding API** | Address → lat/lon coordinates |
 
-\| **\*\*TomTom Routing API\*\*** | Real driving distance & ETA calculation |
+| **TomTom Routing API** | Real driving distance & ETA calculation |
 
-\| **\*\*TomTom Search API\*\*** | Autocomplete location suggestions |
+| **TomTom Search API** | Autocomplete location suggestions |
 
-\| **\*\*Twilio Messaging API\*\*** | SOS SMS alerts to emergency contacts |
+| **Twilio Messaging API** | SOS SMS alerts to emergency contacts |
 
-\| **\*\*Brevo Email API\*\*** | OTP verification & welcome emails |
+| **Brevo Email API** | OTP verification & welcome emails |
 
-\| **\*\*Cloudinary API\*\*** | Image upload & CDN storage |
+| **Cloudinary API** | Image upload & CDN storage |
 
-\---
+---
 
-**## 📁 Project Structure**
+## 📁 Project Structure
 
-\`\`\`
+```
 
 JourneyTogether/
 
@@ -242,13 +242,13 @@ JourneyTogether/
 
 │   ├── routes/
 
-│   │   ├── auth.routes.js          # /api/auth/\*
+│   │   ├── auth.routes.js          # /api/auth/*
 
-│   │   ├── rides.routes.js         # /api/rides/\*
+│   │   ├── rides.routes.js         # /api/rides/*
 
-│   │   ├── sos.routes.js           # /api/sos/\*
+│   │   ├── sos.routes.js           # /api/sos/*
 
-│   │   └── maps.routes.js          # /api/maps/\*
+│   │   └── maps.routes.js          # /api/maps/*
 
 │   ├── middlewares/
 
@@ -334,13 +334,13 @@ JourneyTogether/
 
         └── socket.js                   # Socket.io client singleton
 
-\`\`\`
+```
 
-\---
+---
 
-**## 🏗️ Architecture**
+## 🏗️ Architecture
 
-\`\`\`
+```
 
 ┌─────────────────────────────────────────────────────────────┐
 
@@ -394,241 +394,241 @@ JourneyTogether/
 
    └───────────┘  └───────────┘  └───────────┘  └───────────┘
 
-\`\`\`
+```
 
-\---
+---
 
-**## 📡 API Reference**
+## 📡 API Reference
 
-**### Auth — \`/api/auth\`**
+### Auth — `/api/auth`
 
-\| Method | Endpoint | Auth | Description |
+| Method | Endpoint | Auth | Description |
 
-\|--------|----------|------|-------------|
+|--------|----------|------|-------------|
 
-\| \`POST\` | \`/signup\` | ❌ | Register new user, sends OTP verification email |
+| `POST` | `/signup` | ❌ | Register new user, sends OTP verification email |
 
-\| \`POST\` | \`/login\` | ❌ | Login with email/password, returns JWT cookie |
+| `POST` | `/login` | ❌ | Login with email/password, returns JWT cookie |
 
-\| \`POST\` | \`/logout\` | ✅ | Clears JWT cookie and ends session |
+| `POST` | `/logout` | ✅ | Clears JWT cookie and ends session |
 
-\| \`POST\` | \`/verifyEmail\` | ❌ | Verify email using 6-digit OTP code |
+| `POST` | `/verifyEmail` | ❌ | Verify email using 6-digit OTP code |
 
-\| \`GET\` | \`/me\` | ✅ | Get current authenticated user's profile |
+| `GET` | `/me` | ✅ | Get current authenticated user's profile |
 
-\| \`POST\` | \`/vehicleInfo\` | ✅ | Save driver's vehicle details |
+| `POST` | `/vehicleInfo` | ✅ | Save driver's vehicle details |
 
-\| \`POST\` | \`/pfp\` | ✅ | Upload profile photo (stored on Cloudinary) |
+| `POST` | `/pfp` | ✅ | Upload profile photo (stored on Cloudinary) |
 
-\| \`GET\` | \`/carbon-stats\` | ✅ | Get user's cumulative CO₂ saved in kg |
+| `GET` | `/carbon-stats` | ✅ | Get user's cumulative CO₂ saved in kg |
 
-**### Rides — \`/api/rides\`**
+### Rides — `/api/rides`
 
-\| Method | Endpoint | Auth | Description |
+| Method | Endpoint | Auth | Description |
 
-\|--------|----------|------|-------------|
+|--------|----------|------|-------------|
 
-\| \`POST\` | \`/create\` | ✅ | Create a new ride (distance auto-calculated via TomTom) |
+| `POST` | `/create` | ✅ | Create a new ride (distance auto-calculated via TomTom) |
 
-\| \`GET\` | \`/all\` | ❌ | Get all available (incomplete) rides |
+| `GET` | `/all` | ❌ | Get all available (incomplete) rides |
 
-\| \`GET\` | \`/ride/\:id\` | ❌ | Get a single ride by ID |
+| `GET` | `/ride/:id` | ❌ | Get a single ride by ID |
 
-\| \`PUT\` | \`/update/\:id\` | ✅ | Update ride details (driver only) |
+| `PUT` | `/update/:id` | ✅ | Update ride details (driver only) |
 
-\| \`DELETE\` | \`/delete/\:id\` | ✅ | Delete a ride (driver only) |
+| `DELETE` | `/delete/:id` | ✅ | Delete a ride (driver only) |
 
-\| \`POST\` | \`/filter\` | ✅ | Filter rides by from/to/date/womenOnly |
+| `POST` | `/filter` | ✅ | Filter rides by from/to/date/womenOnly |
 
-\| \`POST\` | \`/confirm/\:id\` | ✅ | Book a seat on a ride |
+| `POST` | `/confirm/:id` | ✅ | Book a seat on a ride |
 
-\| \`POST\` | \`/complete/\:id\` | ✅ | Mark ride complete & trigger carbon calculation |
+| `POST` | `/complete/:id` | ✅ | Mark ride complete & trigger carbon calculation |
 
-\| \`POST\` | \`/rate/\:id\` | ✅ | Rate the driver after a completed ride |
+| `POST` | `/rate/:id` | ✅ | Rate the driver after a completed ride |
 
-\| \`GET\` | \`/ongoing\` | ✅ | Get user's currently active rides |
+| `GET` | `/ongoing` | ✅ | Get user's currently active rides |
 
-\| \`GET\` | \`/completed\` | ✅ | Get user's completed ride history |
+| `GET` | `/completed` | ✅ | Get user's completed ride history |
 
-\| \`GET\` | \`/pending-ratings\` | ✅ | Get completed rides where user hasn't rated yet |
+| `GET` | `/pending-ratings` | ✅ | Get completed rides where user hasn't rated yet |
 
-**### SOS — \`/api/sos\`**
+### SOS — `/api/sos`
 
-\| Method | Endpoint | Auth | Description |
+| Method | Endpoint | Auth | Description |
 
-\|--------|----------|------|-------------|
+|--------|----------|------|-------------|
 
-\| \`POST\` | \`/send\` | ✅ | Trigger SOS — SMS with live location sent via Twilio |
+| `POST` | `/send` | ✅ | Trigger SOS — SMS with live location sent via Twilio |
 
-\| \`POST\` | \`/contacts\` | ✅ | Add a new emergency contact |
+| `POST` | `/contacts` | ✅ | Add a new emergency contact |
 
-\| \`GET\` | \`/contacts\` | ✅ | Get all emergency contacts for the user |
+| `GET` | `/contacts` | ✅ | Get all emergency contacts for the user |
 
-\| \`DELETE\` | \`/contacts/\:id\` | ✅ | Remove an emergency contact |
+| `DELETE` | `/contacts/:id` | ✅ | Remove an emergency contact |
 
-**### Maps — \`/api/maps\`**
+### Maps — `/api/maps`
 
-\| Method | Endpoint | Auth | Description |
+| Method | Endpoint | Auth | Description |
 
-\|--------|----------|------|-------------|
+|--------|----------|------|-------------|
 
-\| \`GET\` | \`/autocomplete\` | ❌ | Get location search suggestions from TomTom |
+| `GET` | `/autocomplete` | ❌ | Get location search suggestions from TomTom |
 
-\| \`GET\` | \`/coordinates\` | ❌ | Geocode an address to lat/lon coordinates |
+| `GET` | `/coordinates` | ❌ | Geocode an address to lat/lon coordinates |
 
-**### WebSocket Events (Socket.io)**
+### WebSocket Events (Socket.io)
 
-\| Event | Direction | Payload | Description |
+| Event | Direction | Payload | Description |
 
-\|-------|-----------|---------|-------------|
+|-------|-----------|---------|-------------|
 
-\| \`joinRide\` | Client → Server | \`{ rideId }\` | Join a ride's location tracking room |
+| `joinRide` | Client → Server | `{ rideId }` | Join a ride's location tracking room |
 
-\| \`sendLocation\` | Client → Server | \`{ rideId, lat, lon }\` | Driver broadcasts current GPS position |
+| `sendLocation` | Client → Server | `{ rideId, lat, lon }` | Driver broadcasts current GPS position |
 
-\| \`locationUpdate\` | Server → Client | \`{ rideId, lat, lon }\` | Passengers receive live driver location |
+| `locationUpdate` | Server → Client | `{ rideId, lat, lon }` | Passengers receive live driver location |
 
-\| \`leaveRide\` | Client → Server | \`{ rideId }\` | Leave the ride's tracking room |
+| `leaveRide` | Client → Server | `{ rideId }` | Leave the ride's tracking room |
 
-\---
+---
 
-**## 🚀 Getting Started**
+## 🚀 Getting Started
 
-**### Prerequisites**
+### Prerequisites
 
-\- Node.js v18+
+- Node.js v18+
 
-\- MongoDB (local instance or [MongoDB Atlas]\(https\://www\.mongodb.com/atlas))
+- MongoDB (local instance or [MongoDB Atlas](https://www.mongodb.com/atlas))
 
-\- TomTom API Key — [Get one free]\(https\://developer.tomtom.com/)
+- TomTom API Key — [Get one free](https://developer.tomtom.com/)
 
-\- Twilio Account — [Sign up]\(https\://www\.twilio.com/)
+- Twilio Account — [Sign up](https://www.twilio.com/)
 
-\- Brevo Account — [Sign up]\(https\://www\.brevo.com/)
+- Brevo Account — [Sign up](https://www.brevo.com/)
 
-\- Cloudinary Account — [Sign up]\(https\://cloudinary.com/)
+- Cloudinary Account — [Sign up](https://cloudinary.com/)
 
-**### Installation**
+### Installation
 
-**\*\*1. Clone the repository\*\***
+**1. Clone the repository**
 
-\`\`\`bash
+```bash
 
-git clone https\://github.com/payalgupta25/JourneyTogether.git
+git clone https://github.com/payalgupta25/JourneyTogether.git
 
 cd JourneyTogether
 
-\`\`\`
+```
 
-**\*\*2. Set up the Backend\*\***
+**2. Set up the Backend**
 
-\`\`\`bash
+```bash
 
 cd backend
 
 npm install
 
-\`\`\`
+```
 
-Create a \`.env\` file in \`backend/\` (see [Environment Variables]\(#-environment-variables) below), then:
+Create a `.env` file in `backend/` (see [Environment Variables](#-environment-variables) below), then:
 
-\`\`\`bash
+```bash
 
 npm run dev
 
-\# Server starts on http\://localhost:8000
+# Server starts on http://localhost:8000
 
-\`\`\`
+```
 
-**\*\*3. Set up the Frontend\*\***
+**3. Set up the Frontend**
 
-\`\`\`bash
+```bash
 
 cd ../frontend
 
 npm install
 
-\`\`\`
+```
 
-Create a \`.env\` file in \`frontend/\`:
+Create a `.env` file in `frontend/`:
 
-\`\`\`env
+```env
 
-VITE\_BASE\_URL=http\://localhost:8000
+VITE_BASE_URL=http://localhost:8000
 
-\`\`\`
+```
 
-\`\`\`bash
+```bash
 
 npm run dev
 
-\# App starts on http\://localhost:5173
+# App starts on http://localhost:5173
 
-\`\`\`
+```
 
-\---
+---
 
-**## 🔑 Environment Variables**
+## 🔑 Environment Variables
 
-Create a \`.env\` file in the \`backend/\` directory with the following:
+Create a `.env` file in the `backend/` directory with the following:
 
-\`\`\`env
+```env
 
-\# Server
+# Server
 
 PORT=8000
 
-NODE\_ENV=development
+NODE_ENV=development
 
-\# MongoDB
+# MongoDB
 
-MONGO\_URI=mongodb+srv://\<username>:\<password>@cluster.mongodb.net/journeytogether
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/journeytogether
 
-\# JWT
+# JWT
 
-JWT\_SECRET=your\_super\_secret\_jwt\_key
+JWT_SECRET=your_super_secret_jwt_key
 
-\# Client URL (for CORS)
+# Client URL (for CORS)
 
-CLIENT\_URL=http\://localhost:5173
+CLIENT_URL=http://localhost:5173
 
-\# TomTom Maps API
+# TomTom Maps API
 
-TOMTOM\_API\_KEY=your\_tomtom\_api\_key
+TOMTOM_API_KEY=your_tomtom_api_key
 
-\# Twilio (SOS SMS)
+# Twilio (SOS SMS)
 
-TWILIO\_SID=your\_twilio\_account\_sid
+TWILIO_SID=your_twilio_account_sid
 
-TWILIO\_AUTH\_TOKEN=your\_twilio\_auth\_token
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
 
-TWILIO\_PHONE\_NUMBER=+1XXXXXXXXXX
+TWILIO_PHONE_NUMBER=+1XXXXXXXXXX
 
-\# Brevo (Transactional Email)
+# Brevo (Transactional Email)
 
-BREVO\_API\_KEY=your\_brevo\_api\_key
+BREVO_API_KEY=your_brevo_api_key
 
-EMAIL\_SENDER\_NAME=JourneyTogether
+EMAIL_SENDER_NAME=JourneyTogether
 
-EMAIL\_SENDER\_ADDRESS=noreply\@yourdomain.com
+EMAIL_SENDER_ADDRESS=noreply@yourdomain.com
 
-\# Cloudinary (Profile Photos)
+# Cloudinary (Profile Photos)
 
-CLOUDINARY\_CLOUD\_NAME=your\_cloud\_name
+CLOUDINARY_CLOUD_NAME=your_cloud_name
 
-CLOUDINARY\_API\_KEY=your\_cloudinary\_api\_key
+CLOUDINARY_API_KEY=your_cloudinary_api_key
 
-CLOUDINARY\_API\_SECRET=your\_cloudinary\_api\_secret
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
-\`\`\`
+```
 
-\---
+---
 
-**## 💡 How Carbon Savings Are Calculated**
+## 💡 How Carbon Savings Are Calculated
 
 When a driver marks a ride as complete, the backend calculates CO₂ savings for every participant:
 
-\`\`\`js
+```js
 
 const emissionFactor = 0.21; // kg CO₂ per km (average petrol car)
 
@@ -636,21 +636,21 @@ const totalPeople = 1 + passengers.length; // driver + all passengers
 
 // CO₂ saved compared to everyone driving alone
 
-const totalCarbonSaved = distance \* (1 - 1 / totalPeople) \* emissionFactor;
+const totalCarbonSaved = distance * (1 - 1 / totalPeople) * emissionFactor;
 
 // Distributed equally across all participants
 
 const carbonPerUser = totalCarbonSaved / totalPeople;
 
-\`\`\`
+```
 
-Each user's \`carbonSaved\` field (in kg) is incremented in MongoDB, building a cumulative environmental impact score that is displayed prominently on the profile dashboard.
+Each user's `carbonSaved` field (in kg) is incremented in MongoDB, building a cumulative environmental impact score that is displayed prominently on the profile dashboard.
 
-\---
+---
 
-**## 👤 User Journey**
+## 👤 User Journey
 
-\`\`\`
+```
 
 Register → Verify Email OTP → Add Vehicle Info
 
@@ -680,26 +680,26 @@ Dashboard (Home) → Browse Rides  OR  Create a Ride
 
                ride history, emergency contacts)
 
-\`\`\`
+```
 
-\---
+---
 
-**## 🛡️ Safety Features**
+## 🛡️ Safety Features
 
-\| Feature | Implementation |
+| Feature | Implementation |
 
-\|---|---|
+|---|---|
 
-\| **\*\*SOS Alert\*\*** | One-tap Twilio SMS with TomTom live location link sent to all emergency contacts |
+| **SOS Alert** | One-tap Twilio SMS with TomTom live location link sent to all emergency contacts |
 
-\| **\*\*Women-Only Rides\*\*** | Server-side gender validation enforced for both driver and passenger |
+| **Women-Only Rides** | Server-side gender validation enforced for both driver and passenger |
 
-\| **\*\*JWT Auth\*\*** | Tokens stored in HTTP-only cookies — immune to XSS token theft |
+| **JWT Auth** | Tokens stored in HTTP-only cookies — immune to XSS token theft |
 
-\| **\*\*Email OTP MFA\*\*** | 6-digit verification code with 24-hour expiry via Brevo |
+| **Email OTP MFA** | 6-digit verification code with 24-hour expiry via Brevo |
 
-\| **\*\*Password Hashing\*\*** | bcryptjs with salt rounds = 10 |
+| **Password Hashing** | bcryptjs with salt rounds = 10 |
 
-\| **\*\*Route Protection\*\*** | All sensitive endpoints require a valid JWT via \`protectRoute\` middleware |
+| **Route Protection** | All sensitive endpoints require a valid JWT via `protectRoute` middleware |
 
-\| **\*\*Driver-Passenger Separation\*\*** | Drivers cannot book their own rides; passengers cannot complete rides |
+| **Driver-Passenger Separation** | Drivers cannot book their own rides; passengers cannot complete rides |
